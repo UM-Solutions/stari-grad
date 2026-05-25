@@ -1,0 +1,54 @@
+.accommodation-intro { color: var(--cream-dim); max-width: 600px; margin-bottom: 40px; line-height: 1.7; }
+.accommodation-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.room-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px;
+  overflow: hidden; transition: all .3s ease;
+  text-decoration: none; display: block; cursor: pointer;
+}
+.room-card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 12px 40px rgba(0,0,0,.3); }
+.room-img {
+  height: 250px; background: linear-gradient(135deg,var(--brick),var(--bg-warm));
+  display: flex; align-items: center; justify-content: center; position: relative;
+  overflow: hidden;
+}
+.room-img::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 60px;
+  background: linear-gradient(transparent, var(--bg-card));
+}
+.room-img-overlay {
+  position: absolute; inset: 0;
+  background: rgba(200,148,62,.12);
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  opacity: 0; transition: opacity .35s ease;
+  font-size: .85rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--accent);
+}
+.room-img-overlay svg { width: 16px; height: 16px; stroke: var(--accent); transition: transform .3s ease; }
+.room-card:hover .room-img-overlay { opacity: 1; }
+.room-card:hover .room-img-overlay svg { transform: translateX(4px); }
+.room-info { padding: 24px; }
+.room-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--cream); margin-bottom: 8px; }
+.room-details { display: flex; gap: 16px; margin-bottom: 16px; }
+.room-detail { font-size: .8rem; color: var(--text-dim); display: flex; align-items: center; gap: 6px; }
+.room-detail svg { width: 14px; height: 14px; stroke: var(--accent); }
+.room-price-row {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);
+}
+.room-price { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+.room-price span { font-size: .8rem; font-weight: 400; color: var(--text-dim); }
+.room-includes { margin-top: 12px; }
+.room-includes span {
+  display: inline-block; padding: 4px 10px; margin: 3px;
+  font-size: .75rem; color: var(--accent);
+  background: rgba(200,148,62,.08); border: 1px solid rgba(200,148,62,.15); border-radius: 3px;
+}
+.room-view-link {
+  font-size: .8rem; font-weight: 600; color: var(--accent);
+  letter-spacing: .5px; transition: letter-spacing .3s ease;
+}
+.room-card:hover .room-view-link { letter-spacing: 1.5px; }
+
+@media (max-width: 900px) {
+  .accommodation-grid { grid-template-columns: 1fr; }
+}

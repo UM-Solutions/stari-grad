@@ -1,0 +1,18 @@
+.about-page-content { max-width: 800px; margin: 0 auto; }
+.about-story {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; line-height: 1.9; color: var(--cream-dim); margin-bottom: 40px;
+}
+.about-story::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem; float: left; line-height: .8;
+  color: var(--accent); margin-right: 12px; margin-top: 8px;
+}
+.about-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+.about-info-card { padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; }
+.about-info-card h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--accent); margin-bottom: 8px; }
+.about-info-card p { font-size: .9rem; color: var(--cream-dim); line-height: 1.6; }
+
+@media (max-width: 900px) {
+  .about-info-grid { grid-template-columns: 1fr; }
+}

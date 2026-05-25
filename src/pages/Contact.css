@@ -1,0 +1,17 @@
+.contact-info-col {
+  display: flex; flex-direction: column; align-items: center; gap: 24px;
+}
+.contact-item {
+  display: flex; align-items: center; gap: 10px; color: var(--cream-dim);
+}
+.contact-item svg { width: 18px; height: 18px; stroke: var(--accent); flex-shrink: 0; }
+.contact-item a {
+  color: var(--cream-dim); text-decoration: none; transition: color .3s;
+}
+.contact-item a:hover { color: var(--accent); }
+
+.map-container {
+  margin-top: 50px; height: 350px;
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px;
+  overflow: hidden;
+}
